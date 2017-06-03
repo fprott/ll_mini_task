@@ -20,6 +20,7 @@ public class Main {
 			String userDir = System.getProperty("user.dir");
 			input_file_name = userDir+relPath+input_file_name;
 			
+			//ich füge mal nen KOmmentar ein
 			Parser p = new Parser();
 			p.parseFile(input_file_name);
 			

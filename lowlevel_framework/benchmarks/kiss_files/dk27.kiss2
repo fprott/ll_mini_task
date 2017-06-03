@@ -1,0 +1,19 @@
+
+.i 1 
+.o 2 
+.p 14 
+.s 7
+0 START sta6 00
+0 sta2 sta5 00
+0 sta3 sta5 00
+0 sta4 sta6 00
+0 sta5 START 10
+0 sta6 START 01
+0 sta7 sta5 00
+1 sta6 sta2 01
+1 sta5 sta2 10
+1 sta4 sta6 10
+1 sta7 sta6 10
+1 START sta4 00
+1 sta2 sta3 00
+1 sta3 sta7 00

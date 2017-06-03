@@ -1,0 +1,35 @@
+
+.i 1 
+.o 3 
+.p 30 
+.s 15
+0 sta_1 sta_8 000
+0 sta_2 sta_4 000
+0 sta_3 sta_5 000
+0 sta_4 sta_8 000
+0 sta_5 sta_8 000
+0 sta_6 sta_13 000
+0 sta_7 sta_4 000
+0 sta_8 sta_1 001
+0 sta_9 sta_4 000
+0 sta_10 sta_1 010
+0 sta_11 sta_3 010
+0 sta_12 sta_4 100
+0 sta_13 sta_5 100
+0 sta_14 sta_3 100
+0 sta_15 sta_4 000
+1 sta_1 sta_9 000
+1 sta_2 sta_3 000
+1 sta_3 sta_6 000
+1 sta_4 sta_11 000
+1 sta_5 sta_12 000
+1 sta_6 sta_14 000
+1 sta_7 sta_15 000
+1 sta_8 sta_2 001
+1 sta_9 sta_3 001
+1 sta_10 sta_2 010
+1 sta_11 sta_4 010
+1 sta_12 sta_3 001
+1 sta_13 sta_6 100
+1 sta_14 sta_7 100
+1 sta_15 sta_6 000

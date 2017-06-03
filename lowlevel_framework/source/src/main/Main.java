@@ -16,7 +16,7 @@ public class Main {
 			System.out.println(" Current working directory : " + System.getProperty("user.dir"));
 			
 			String input_file_name = args[0];
-			String relPath = "\\benchmarks\\kiss_files\\";
+			String relPath = "\\lowlevel_framework\\benchmarks\\kiss_files\\";
 			String userDir = System.getProperty("user.dir");
 			input_file_name = userDir+relPath+input_file_name;
 			

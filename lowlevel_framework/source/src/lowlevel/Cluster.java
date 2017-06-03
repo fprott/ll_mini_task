@@ -14,7 +14,7 @@ public class Cluster {
     // should be either "binary" or "onehot"
     private String internalEncoding;
 
-    private int id;
+    private long id;
 
     private int numInputs;
 
@@ -42,11 +42,11 @@ public class Cluster {
         internalEncoding=enc;
     }
 
-    public void setID(int id){
+    public void setID(long id){
         this.id = id;
     }
 
-    public int getID(){
+    public long getID(){
         return id;
     }
 
@@ -57,7 +57,7 @@ public class Cluster {
     public int getInputs(){
         return numInputs;
     }
-}
+
 
     public String getEncodedCluster(){
         StringBuilder bld = new StringBuilder();

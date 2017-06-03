@@ -1,94 +1,49 @@
 package lowlevel;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import lowlevel.State;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by Julian Käuser on 03.06.2017.
+ * Created by theChaoS on 03.06.2017.
  */
 public class Cluster {
+    private List<State> myStates;
+    private List<Transition>
 
-    private Set<State> states;
-    private Set<Transition> transition;
-
-    // should be either "binary" or "onehot"
-    private String internalEncoding;
-
-    private long id;
-
-    private int numInputs;
-
+    @Override
     public Cluster(){
-        states = new HashSet<State>();
+        this.myStates= new ArrayList<State>();
     }
 
-    public boolean addState(State state){
-        System.out.println("TESST");
-        state.getTransitions();
-    //    this.transition=;
-        return states.add(state);
+    @Override
+    public Cluster(ArrayList<State> states){
+        this.myStates=states;
     }
 
-    public State[] getStateArray(){
-        return (State[]) states.toArray();
-    }
 
-    public boolean removeState(State state){
-        return states.remove(state);
-    }
-
-    public String getEncoding(){
-        return internalEncoding;
-    }
-
-    public void setEncoding(String enc){
-        internalEncoding=enc;
-    }
-
-    public void setID(long id){
-        this.id = id;
-    }
-
-    public long getID(){
-        return id;
-    }
-
-    public int getNumStates(){
-        return states.size();
-    }
-
-    public int getInputs(){
-        return numInputs;
-    }
-/*
-    public getTransitions(){
-
-    }
-*/
-    public int getNumOfTransitions(){
-        return 0;
-    }
-
-    public String getEncodedCluster(){
-        StringBuilder bld = new StringBuilder();
-
-       // ClusterEncoder enc = new ClusterEncoder();
-        HashMap<State, String> map = null;
-        switch (getEncoding()) {
-            case "binary":
-                //map = enc.encodeBinary(this.getStateArray(), this.getInputs());
-            case "onehot":
-                //map = enc.encodeOneHot(this.getStateArray(), this.getInputs());
+    public void addState(State aState){
+        this.myStates.add(aState);
+        for(State state : this.myStates){
+            state
         }
-        for (State s : map.keySet()) {
-            String str = ".code "+s.getName()+" "+map.get(s)+"\n";
-            bld.append(str);
-        }
-        return bld.toString();
+
     }
 
-    public String getCode(){
-        return "";
+    public getAllStates(){
+
+    }
+
+    public getOutgoingTransactions(){
+
+    }
+
+    public getIngoingTransactions(){
+
+    }
+
+    public getTransactions(){
+
     }
 }

@@ -22,4 +22,8 @@ public class StateMachine {
     public int getNumOutputs(){
         return numOutputs;
     }
+
+    public Set<Cluster> getClusters(){
+        return this.clusters;
+    }
 }

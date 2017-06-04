@@ -73,18 +73,22 @@ public class Cluster {
     public String getEncodedCluster(){
         StringBuilder bld = new StringBuilder();
 
-        ClusterEncoder enc = new ClusterEncoder();
+       // ClusterEncoder enc = new ClusterEncoder();
         HashMap<State, String> map = null;
         switch (getEncoding()) {
             case "binary":
-                map = enc.encodeBinary(this.getStateArray(), this.getInputs());
+                //map = enc.encodeBinary(this.getStateArray(), this.getInputs());
             case "onehot":
-                map = enc.encodeOneHot(this.getStateArray(), this.getInputs());
+                //map = enc.encodeOneHot(this.getStateArray(), this.getInputs());
         }
         for (State s : map.keySet()) {
             String str = ".code "+s.getName()+" "+map.get(s)+"\n";
             bld.append(str);
         }
         return bld.toString();
+    }
+
+    public String getCode(){
+        return "";
     }
 }

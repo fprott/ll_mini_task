@@ -57,8 +57,7 @@ public class StateMachineWriter {
         //latch mapping
         bld.append(".latch_order ");
 
-<<<<<<< Updated upstream
-=======
+
         for (int ii=0; ii<latches.length; ii++){
             bld.append(latches[ii]);
         }
@@ -74,7 +73,7 @@ public class StateMachineWriter {
         bld.append(".end");
         destination = (destination.endsWith(System.lineSeparator())) ? destination : (destination + System.lineSeparator());
         destination += fsm.name+"_clusterEncoded.kiss2";
->>>>>>> Stashed changes
+
         try (FileWriter out = new FileWriter(destination)) {
             BufferedWriter buf = new BufferedWriter(out);
             buf.write(bld.toString());
@@ -86,14 +85,13 @@ public class StateMachineWriter {
     }
 
     private static String[] getLatches(StateMachine fsm){
-        String[] latches;
-        if (fsm==null){
+        String[] latches = null;
+        if (fsm==null) {
             latches = new String[1];
             latches[0] = "";
             return latches;
         }
 
-        int
 
         return latches;
 
@@ -111,8 +109,9 @@ public class StateMachineWriter {
     }
 
     private static String[] getClusterInternalLatches(Cluster cluster){
-        String[] latches;
-        int len = cluster.
+        String[] latches = null;
+        int len;
+        return latches;
 
     }
 }

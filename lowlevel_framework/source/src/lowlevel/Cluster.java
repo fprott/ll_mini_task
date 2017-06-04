@@ -19,6 +19,8 @@ public class Cluster {
 
     private int numInputs;
 
+    private String code;
+
     public Cluster(){
         states = new HashSet<State>();
     }
@@ -70,6 +72,8 @@ public class Cluster {
         return 0;
     }
 
+
+
     public String getEncodedCluster(){
         StringBuilder bld = new StringBuilder();
 
@@ -86,5 +90,9 @@ public class Cluster {
             bld.append(str);
         }
         return bld.toString();
+    }
+
+    public String getCode() {
+        return code;
     }
 }

@@ -23,8 +23,8 @@ public class ClusterEncoder {
      * @return  A mapping of states to strings containing their one-hot value (as chars of {0,1})
      *          if encoding is not possible (too many states), return null
      */
- //   public HashMap<State, String> encodeOneHot (State[] states, int nIn){
- //       HashMap<State, String> result = new HashMap<State, String>();
+    public HashMap<State, String> encodeOneHot (State[] states, int nIn){
+        HashMap<State, String> result = new HashMap<State, String>();
 
         /*
         precondition: states have yet been chosen regarding their clusterability
@@ -33,7 +33,7 @@ public class ClusterEncoder {
 
 
 
-//    }
+    }
 
     /**
      * Takes the selected states for a cluster, namely in the array states, and packs them into a LUT-feasible
@@ -41,9 +41,9 @@ public class ClusterEncoder {
      * @param states the states in the cluster
      * @return A mapping of states to strings containing their binary value (as chars of {0,1})
      */
-//    public HashMap<State, String> encodeBinary(State[] states, int nIn){
-//        HashMap<State, String> result = new HashMap<State, String>();
-//    }
+    public HashMap<State, String> encodeBinary(State[] states, int nIn){
+        HashMap<State, String> result = new HashMap<State, String>();
+    }
 
 }
 

@@ -9,15 +9,13 @@ public class Transition {
     private Cluster targetCluster;
     private Cluster originCluster;
 
-    @Override
     public Transition(State targetState, State startState, Cluster targetCluster, Cluster startCluster){
         this.targetState=targetState;
         this.originState=startState;
         this.originCluster=startCluster;
-        this.targetCluster=targetCluster;//Meh mememmemfrgdddgdd
+        this.targetCluster=targetCluster;
     }
 
-    @Override
     public Transition(State targetState, State startState, Cluster currentCluster){
         this.targetState=targetState;
         this.originState=startState;

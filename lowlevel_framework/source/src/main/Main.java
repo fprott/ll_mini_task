@@ -27,7 +27,7 @@ public class Main {
 
 			File dir = new File(input_file_name);
 			ParsedFile[] inputFiles;
-			if (args[1]!=null && args[1]=="-all" && dir.isDirectory()){
+			if (args[1]!=null && args[1]!=null && args[1]=="-all" && dir.isDirectory()){
 				// args[0] is a directory, and all files of the directory shall be parsed
 				FilenameFilter filter = new FilenameFilter() {
 					@Override

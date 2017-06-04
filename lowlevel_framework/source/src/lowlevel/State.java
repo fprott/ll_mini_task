@@ -129,9 +129,9 @@ public class State {
 		
 		int i=0;
 		for(Map.Entry<Long, State> entry : nextStateMap.entrySet()){
-			transitions[i][0] = this.code;
-			transitions[i][1] = entry.getKey();
-			transitions[i][2] = entry.getValue().getCode();
+			transitions[i][0] = this.code; //current State in code ?
+			transitions[i][1] = entry.getKey(); //Input Code ?
+			transitions[i][2] = entry.getValue().getCode(); //next State Code ?
 			i++;
 		}
 		

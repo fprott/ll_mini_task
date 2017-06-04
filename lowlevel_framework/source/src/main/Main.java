@@ -6,6 +6,8 @@ import lowlevel.ParsedFile;
 import java.io.File;
 import java.io.FilenameFilter;
 
+import lowlevel.Cluster;
+
 /**
  * Main class
  * @author Wolf & Gottschling
@@ -25,7 +27,7 @@ public class Main {
 
 			File dir = new File(input_file_name);
 			ParsedFile[] inputFiles;
-			if (args[1]!=null && args[1]=="-all" && dir.isDirectory()){
+			if (args.length>1 && args[1]!=null  && args[1]=="-all" && dir.isDirectory()){
 				// args[0] is a directory, and all files of the directory shall be parsed
 				FilenameFilter filter = new FilenameFilter() {
 					@Override
@@ -55,8 +57,10 @@ public class Main {
 			
 
 			
-			// TODO - here you go 
+			// TODO - here you go
 
+			Cluster myCluster = new Cluster();
+			myCluster.addState(fsm.getStates()[0]); //DAS kommentar !!!
 		}
 		else{
 			System.out.println("No input argument given");

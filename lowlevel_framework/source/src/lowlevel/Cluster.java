@@ -10,19 +10,32 @@ import java.util.Set;
 public class Cluster {
 
     private Set<State> states;
+    private Set<Transition> transitions;
 
     // should be either "binary" or "onehot"
     private String internalEncoding;
 
-    private int id;
+    private long id;
 
     private int numInputs;
 
     public Cluster(){
-        states = new HashSet<State>();
+        this.states = new HashSet<State>();
+        this.transitions = new HashSet<Transition>();
     }
 
     public boolean addState(State state){
+    //    System.out.println("-----TEST-----");
+        long[][] crappy_transitions= state.getTransitions();
+        //ACHTUNG, war NICHT dokumentiert und ist super unsicher
+        for(int i=0;i<crappy_transitions.length;i++){
+            State originState=state;
+            long input=crappy_transitions[i][1];
+            State targetState= state.getNextState((int)input);
+            Transition myTransition= new Transition(input, targetState, originState, this);
+            this.transitions.add(myTransition);
+        }
+    //    System.out.println("ENDE");
         return states.add(state);
     }
 
@@ -42,11 +55,11 @@ public class Cluster {
         internalEncoding=enc;
     }
 
-    public void setID(int id){
+    public void setID(long id){
         this.id = id;
     }
 
-    public int getID(){
+    public long getID(){
         return id;
     }
 
@@ -57,23 +70,34 @@ public class Cluster {
     public int getInputs(){
         return numInputs;
     }
-}
+
+    public Set<Transition> getTransitions(){
+        return this.transitions;
+    }
+
+    public int getNumOfTransitions(){
+        return this.transitions.size();
+    }
 
     public String getEncodedCluster(){
         StringBuilder bld = new StringBuilder();
 
-        ClusterEncoder enc = new ClusterEncoder();
+       // ClusterEncoder enc = new ClusterEncoder();
         HashMap<State, String> map = null;
         switch (getEncoding()) {
             case "binary":
-                map = enc.encodeBinary(this.getStateArray(), this.getInputs());
+                //map = enc.encodeBinary(this.getStateArray(), this.getInputs());
             case "onehot":
-                map = enc.encodeOneHot(this.getStateArray(), this.getInputs());
+                //map = enc.encodeOneHot(this.getStateArray(), this.getInputs());
         }
         for (State s : map.keySet()) {
             String str = ".code "+s.getName()+" "+map.get(s)+"\n";
             bld.append(str);
         }
         return bld.toString();
+    }
+
+    public String getCode(){
+        return "";
     }
 }

@@ -14,7 +14,7 @@ public class Transition {
         this.targetState=targetState;
         this.originState=startState;
         this.originCluster=startCluster;
-        this.targetCluster=targetCluster;//Eine änderung!
+        this.targetCluster=targetCluster;//Meh mememmemfrgdddgdd
     }
 
     @Override

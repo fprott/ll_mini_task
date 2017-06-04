@@ -12,6 +12,8 @@ public class StateMachine {
     private int numInputs;
     private int numOutputs;
 
+    private State resetState;
+
     public String getEncoding(){
         return null;
     }
@@ -21,5 +23,14 @@ public class StateMachine {
     }
     public int getNumOutputs(){
         return numOutputs;
+    }
+    public String getResetState(){ return resetState.toString(); }
+
+    public int getNumClusters(){
+        return clusters.size();
+    }
+
+    public Set<Cluster> getClusters(){
+        return this.clusters;
     }
 }

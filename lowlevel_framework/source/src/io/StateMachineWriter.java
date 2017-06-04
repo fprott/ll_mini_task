@@ -119,7 +119,7 @@ public class StateMachineWriter {
 
     private static String buildInputs(StateMachine fsm){
         String ins = "";
-
+        return ins;
 
     }
 }

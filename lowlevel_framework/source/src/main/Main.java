@@ -61,6 +61,8 @@ public class Main {
 
 			Cluster myCluster = new Cluster();
 
+			//use StateMachineWriter here to generate output file (BLIF)
+
 		}
 		else{
 			System.out.println("No input argument given");

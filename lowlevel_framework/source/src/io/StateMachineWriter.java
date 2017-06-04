@@ -20,7 +20,7 @@ public class StateMachineWriter {
     /**
      *
      * @param fsm the StateMachine object to write out
-     * @param destination the directory (without line separator in the end!) where the written .kiss2
+     * @param destination the directory where the written .kiss2
      *                    file shall be placed
      */
     public static void writeFSM(StateMachine fsm, String destination){
@@ -37,6 +37,8 @@ public class StateMachineWriter {
         StringBuilder bld = new StringBuilder();
         bld.append("# "+fsm.name +" encoded cluster-wise\n");
         bld.append(".model "+fsm.name);
+
+        bld.append(buildInputs(fsm));
 
         // latch initilizations
         String[] latches = getLatches(fsm);
@@ -112,6 +114,12 @@ public class StateMachineWriter {
         String[] latches = null;
         int len;
         return latches;
+
+    }
+
+    private static String buildInputs(StateMachine fsm){
+        String ins = "";
+
 
     }
 }

@@ -60,9 +60,7 @@ public class Main {
 			// TODO - here you go
 
 			Cluster myCluster = new Cluster();
-
-			//use StateMachineWriter here to generate output file (BLIF)
-
+			myCluster.addState(fsm.getInitialState()); //DAS kommentar !!!
 		}
 		else{
 			System.out.println("No input argument given");

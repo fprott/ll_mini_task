@@ -28,8 +28,6 @@ public class StateMachineWriter {
         bld.append(".end_kiss\n");
         bld.append(".latch_order "); // latch mapping
 
-
-
         try (FileWriter out = new FileWriter(destination)) {
             BufferedWriter buf = new BufferedWriter(out);
             buf.write(bld.toString());

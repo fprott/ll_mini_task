@@ -6,6 +6,8 @@ import lowlevel.ParsedFile;
 import java.io.File;
 import java.io.FilenameFilter;
 
+import lowlevel.Cluster;
+
 /**
  * Main class
  * @author Wolf & Gottschling
@@ -55,7 +57,9 @@ public class Main {
 			
 
 			
-			// TODO - here you go 
+			// TODO - here you go
+
+			Cluster myCluster = new Cluster();
 
 		}
 		else{

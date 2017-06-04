@@ -10,6 +10,7 @@ import java.util.Set;
 public class Cluster {
 
     private Set<State> states;
+    private Set<Transition> transition;
 
     // should be either "binary" or "onehot"
     private String internalEncoding;
@@ -23,6 +24,9 @@ public class Cluster {
     }
 
     public boolean addState(State state){
+        System.out.println("TESST");
+        state.getTransitions();
+    //    this.transition=;
         return states.add(state);
     }
 
@@ -57,7 +61,14 @@ public class Cluster {
     public int getInputs(){
         return numInputs;
     }
+/*
+    public getTransitions(){
 
+    }
+*/
+    public int getNumOfTransitions(){
+        return 0;
+    }
 
     public String getEncodedCluster(){
         StringBuilder bld = new StringBuilder();
